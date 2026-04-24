@@ -7,10 +7,9 @@ import { useState } from "react";
 export function Header({data}:any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { logo, menuItem } = data;
-console.log(menuItem,"fghmj,klogo")
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 py-6 px-4 md:px-6 2lg:px-12 mx-auto max-w-[1920px]">
-      <div className="flex items-center justify-between px-4 lg:px-5 2lg:px-8 py-2 lg:py-4 border border-white rounded-[50px]">
+    <header className="absolute top-0 left-0 right-0 z-50 py-4 px-4 md:px-6 2lg:px-12 mx-auto max-w-[1920px]">
+      <div className="flex items-center justify-between px-0">
       <div className="flex items-center gap-2">
         <Image src={`https:${logo.fields.file.url}`} 
           alt={logo?.fields?.description || "logo" }
@@ -66,9 +65,9 @@ console.log(menuItem,"fghmj,klogo")
         </div>
 
         <nav className="flex-1 space-y-1">
-          {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="flex items-center justify-between p-3 text-base font-medium text-slate-800 rounded-xl hover:bg-slate-50 transition-colors">
-              {item.label}
+          {menuItem.map((item : any) => (
+          <a key={item?.fields?.label} href={""} className="flex items-center justify-between p-3 text-base font-medium text-slate-800 rounded-xl hover:bg-slate-50 transition-colors">
+               {item?.fields?.title}
             </a>
           ))}
         </nav>

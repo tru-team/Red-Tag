@@ -30,7 +30,7 @@ export function EmblaSection<T>({ title, items, renderItem }: Props<T>) {
   }, [emblaApi]);
 
 
-  const activeStyle = "border-[#CA2129] text-[#CA2129] hover:bg-[#CA2129] hover:text-white";
+  const activeStyle = "border-[#000] text-[#000] hover:bg-[#000] hover:text-white";
   const disabledStyle = "border-gray-200 text-gray-300";
 
   return (

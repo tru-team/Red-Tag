@@ -79,16 +79,16 @@ const DEALS: Deal[] = [
 
 function DealCard({ deal }: { deal: Deal }) {
   return (
-    <div className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer h-full">
-      <div className="relative">
+    <div className="bg-white rounded-xl overflow-hidden  transition-shadow cursor-pointer h-full">
+      <div className="relative rounded-xl overflow-hidden h-32 lg:h-40">
         <img src={deal.image} alt={deal.name} className="w-full h-32 lg:h-40 object-cover hover:scale-105 transition-transform duration-500" />
        
       </div>
-      <div className="p-3">
+      <div className="py-3 px-0">
         <div className="flex items-center justify-between gap-2 mb-1">
-        <span className="backdrop-blur-sm text-[#757575] text-[14px] font-medium px-0 py-0.5 rounded-full">
+        {/* <span className="backdrop-blur-sm text-[#757575] text-[14px] font-medium px-0 py-0.5 rounded-full">
           {deal.location}
-        </span>
+        </span> */}
          <span className=" bg-[#B91C1C] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
           -{deal.discount}%
         </span>
@@ -115,7 +115,7 @@ function DealCard({ deal }: { deal: Deal }) {
             {deal.packageType}
           </div>
         </div>
-        <div className="mt-4 pt-2 border-t border-gray-100">
+        <div className="mt-2 pt-2 border-t border-gray-100">
           <span className="text-[14px] text-[#1C75BC]">from </span>
           <span className="text-[#1C75BC] font-semibold text-[20px]">{deal.price}</span>
           <span className="text-[14px] text-[#757575]">/pp</span>
@@ -129,12 +129,8 @@ export default function FlashDeals() {
   return (
     <EmblaSection
       title={
-        <h2 className="text-[32px] font-medium text-[#CA2129] flex flex-col xs:flex-row items-center gap-2">
-          <span className="w-full xs:w-auto flex items-center gap-2"><Image src="/images/icons/flash.svg" 
-                    alt="flash icon" 
-                    width={24} 
-                    height={24} 
-                    className="w-6 h-6" /> Flash Deals</span>
+        <h2 className="text-[32px] font-medium text-[#00537A] flex flex-col xs:flex-row items-center gap-1">
+          <span className="w-full xs:w-auto flex items-center gap-0"> Flash Deals</span>
           <span className="text-[32px] font-normal text-[#00537A]">· Updated Hourly</span>
         </h2>
       }

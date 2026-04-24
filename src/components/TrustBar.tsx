@@ -53,7 +53,7 @@ export default function TrustBar() {
             key={stat.label}
             className={`rounded-2xl p-4 lg:p-8 flex flex-col items-center justify-center gap-3 ${
               stat.highlight
-                ? "bg-[#CA2129] text-white shadow-lg shadow-red-200"
+                ? "bg-[#1C75BC] text-white shadow-lg shadow-[#1C75BC]/50"
                 : "bg-[#F2F3F3] text-gray-700 border border-[#F2F3F3] hover:bg-[#E0E0E0] hover:border-[#E0E0E0] transition-colors"
             }`}
           >

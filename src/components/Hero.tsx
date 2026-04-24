@@ -4,7 +4,6 @@ import { getBannerContent } from "../services/contentful";
 
 export default async function Hero() {
   const data:any = await getBannerContent();
-  console.log(data,"dfghjk")
   return (
     <section
       className="relative min-h-[700px] flex flex-col bg-cover bg-center bg-[url(/herobanner.jpg)]"
@@ -21,7 +20,7 @@ export default async function Hero() {
           <h1 className=" text-[40px] xs:text-5xl 2xl:text-6xl 4xl:text-7xl 7xl:text-[96px] font-semibold leading-tight mb-4">
             {data?.heading?.split(",")[0]?.trim()},<br />
              {data?.heading?.split(",")[1]?.trim()}{" "}
-            <span className="text-[#FFD193]">{data?.headingHighlight}</span>
+            <span className="text-[#FFD193] animate-pulse">{data?.headingHighlight}</span>
           </h1>
           <p className="text-white text-[14px] lg:text-xl leading-relaxed max-w-3xl">
             {data?.subheading}
