@@ -1,0 +1,7 @@
+.contentfulrc.json
+package-lock.json
+node_modules
+.next
+.env
+dist
+build

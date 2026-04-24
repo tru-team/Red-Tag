@@ -1,0 +1,35 @@
+{
+  "name": "redtag-nextjs",
+  "version": "2.2.2",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "contentful:login": "contentful login",
+    "contentful:space-list": "contentful space list",
+    "contentful:export": "contentful space export --space-id bdwftjmkbtqf",
+    "contentful:import": "contentful space import --space-id bdwftjmkbtqf --content-file ./contentful-export.json",
+    "contentful:migration": "contentful space migration"
+  },
+  "dependencies": {
+    "contentful": "^11.12.1",
+    "embla-carousel-react": "^8.6.0",
+    "next": "^16.2.4",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.0.1",
+    "contentful-cli": "^4.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "15.3.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
